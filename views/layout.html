@@ -90,8 +90,10 @@
             </a>
         </li>
         <% } %>
-        <li><a href='/getstart'>新手入门</a></li>
-        <li><a href='/api'>API</a></li>
+        <li><a href='/manual'>万达生存手册</a></li>
+        <li><a href='/products'>产品墙</a></li>
+	    <li><a href='/resources'>资源分享</a></li>
+	    <li><a href='/groups'>兴趣小组</a></li>		
         <%
         var site_navs = config.site_navs || [];
         for (var i = 0, l = site_navs.length; i < l; i++) {
@@ -126,10 +128,12 @@
     <div class="links">
       <a class='dark' href='/rss'>RSS</a>
       |
-      <a class='dark' href='https://github.com/cnodejs/nodeclub/'>源码地址</a>
+      <a class='dark' href='https://github.com/wanghaisheng/wondersinformaticsclub/'>源码地址</a>
     </div>
 
-    <%- partial('./_sponsors') %>
+  <!--  <%- partial('./_sponsors') %> -->
+  
+   
 
   </div>
 </div>

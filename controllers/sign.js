@@ -142,12 +142,14 @@ exports.login = function (req, res, next) {
       if (!bool) {
         return ep.emit('login_error');
       }
+/**	本地测试  绕过邮箱验证的环节
       if (!user.active) {
         // 重新发送激活邮件
         mail.sendActiveMail(user.email, utility.md5(user.email + passhash + config.session_secret), user.loginname);
         res.status(403);
         return res.render('sign/signin', { error: '此帐号还没有被激活，激活链接已发送到 ' + user.email + ' 邮箱，请查收。' });
       }
+*/
       // store session cookie
       authMiddleWare.gen_session(user, res);
       //check at some page just jump to home page

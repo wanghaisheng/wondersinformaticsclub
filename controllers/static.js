@@ -12,8 +12,8 @@ exports.faq = function (req, res, next) {
   res.render('static/faq');
 };
 
-exports.getstart = function (req, res) {
-  res.render('static/getstart');
+exports.manual = function (req, res) {
+  res.render('static/manual');
 };
 
 exports.robots = function (req, res, next) {
@@ -29,6 +29,14 @@ exports.robots = function (req, res, next) {
   }));
 };
 
-exports.api = function (req, res, next) {
-  res.render('static/api');
+exports.products = function (req, res, next) {
+  res.render('static/products');
+};
+
+exports.resources = function (req, res, next) {
+  res.render('static/resources');
+};
+
+exports.groups = function (req, res, next) {
+  res.render('static/groups');
 };

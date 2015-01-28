@@ -1,0 +1,59 @@
+<%- partial('../sidebar') %>
+
+<div id='content'>
+  <div class='panel'>
+    <div class='header'>
+      <ul class='breadcrumb'>
+        <li><a href='/'>主页</a><span class='divider'>/</span></li>
+        <li class='active'>万达生存手册</li>
+      </ul>
+    </div>
+    <div class='inner topic'>
+      <div class="topic_content">
+        <%- markdown(multiline(function () {
+/*
+## 衣食住行
+
+《**863附近的衣食住行**》
+
+
+《**静安寺附近的衣食住行**》
+
+
+《**去哪看电影**》
+
+
+## 日常
+
+《**电脑等设备如何申请和维修**》
+
+
+《**报销单如何填写**》
+
+
+《**材料如何打印和复印**》
+
+
+《**户口和居住证相关**》
+
+
+《**班车时刻表**》
+
+
+
+《**报销的点点滴滴**》
+
+
+## 万达信息 名人
+
+《**谁最美**》
+
+
+《**谁最牛**》
+
+*/
+        })) %>
+      </div>
+    </div>
+  </div>
+</div>

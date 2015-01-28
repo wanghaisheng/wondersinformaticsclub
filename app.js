@@ -58,10 +58,13 @@ app.engine('html', require('ejs-mate'));
 app.locals._layoutFile = 'layout.html';
 
 app.use(require('response-time')());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
+
+//http://stackoverflow.com/questions/19917401/node-js-express-request-entity-too-large  https://github.com/cnodejs/nodeclub/issues/448
+
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+
+
 app.use(require('method-override')());
 app.use(require('cookie-parser')(config.session_secret));
 app.use(compress());
@@ -141,7 +144,7 @@ if (config.debug) {
 }
 
 app.listen(config.port, function () {
-  console.log("NodeClub listening on port %d in %s mode", config.port, app.settings.env);
+  console.log("wondersClub listening on port %d in %s mode", config.port, app.settings.env);
   console.log("God bless love....");
   console.log("You can debug your app with http://" + config.hostname + ':' + config.port);
 });
