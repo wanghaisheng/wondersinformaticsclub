@@ -99,6 +99,7 @@ router.post('/upload', auth.userRequired, topic.upload); //上传图片
 // static
 router.get('/about', staticController.about);
 router.get('/faq', staticController.faq);
+router.get('/robots.txt', staticController.robots);
 router.get('/manual', staticController.manual);
 router.get('/robots.txt', staticController.robots);
 router.get('/products', staticController.products);

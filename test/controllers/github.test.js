@@ -134,7 +134,7 @@ describe('test/controllers/github.test.js', function () {
           if (err) {
             return done(err);
           }
-          res.text.should.match(/您 GitHub 账号的.*与之前在 CNodejs 注册的.*重复了/);
+          res.text.should.match(/您 GitHub 账号的.*与之前在 万达人论坛上 注册的.*重复了/);
           done();
         });
     });
