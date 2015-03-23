@@ -110,7 +110,14 @@ var config = {
     ['share', '分享'],
     ['ask', '问答'],
     ['job', '招聘'],
-  ]
+  ],
+
+  // 极光推送
+  jpush: {
+    appKey: 'YourAccessKeyyyyyyyyyyyy',
+    masterSecret: 'YourSecretKeyyyyyyyyyyyyy',
+    isDebug: false,
+  }
 };
 
 module.exports = config;
